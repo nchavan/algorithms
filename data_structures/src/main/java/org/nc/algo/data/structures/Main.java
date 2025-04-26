@@ -1,4 +1,4 @@
-package org.nc.data.structures.arrays;
+package org.nc.algo.data.structures;
 
 public class Main {
     public static void main(String[] args) {
