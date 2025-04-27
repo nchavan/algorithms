@@ -12,9 +12,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class FibonacciTest {
     public static Stream<Arguments> dataProvided() {
         return Stream.of(
-                Arguments.of(5, 5)
-//                Arguments.of(6, 8),
-//                Arguments.of(7, 13)
+                Arguments.of(5, 5),
+                Arguments.of(6, 8),
+                Arguments.of(7, 13)
         );
     }
 
