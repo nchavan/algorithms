@@ -1,5 +1,8 @@
 package org.nc.algo.data.structures.arrays;
 
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
 public class MergeSortedArray {
 
     public int[] mergeSortedArraySwitchingElementsReduceSpace(int[] array1, int[] array2) {
@@ -31,6 +34,13 @@ public class MergeSortedArray {
 
     }
 
+    public int[] mergeArraysUsingStreams(int[] array1, int[] array2) {
+        return IntStream.concat(Arrays.stream(array1), Arrays.stream(array2))
+                .filter(i -> i != 0)
+                .sorted()
+                .toArray();
+    }
+
     public int[] mergeSortedArray(int[] array1, int[] array2) {
 
         if (array2 == null && array1 == null) return new int[]{};
@@ -58,5 +68,4 @@ public class MergeSortedArray {
 
         return mergeArrays;
     }
-
 }
