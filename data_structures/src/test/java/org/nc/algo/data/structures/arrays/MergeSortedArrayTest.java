@@ -29,6 +29,16 @@ class MergeSortedArrayTest {
 
     }
 
+    @ParameterizedTest
+    @MethodSource("provideMergeArrays")
+    public void mergeSortedArraysUsingStreams(int[] arr1, int[] arr2, int[] exp) {
+        MergeSortedArray mergeSortedArray = new MergeSortedArray();
+        int[] output = mergeSortedArray.mergeArraysUsingStreams(arr1, arr2);
+        Assertions.assertThat(output)
+                .contains(exp);
+
+    }
+
     private static Stream<Arguments> provideMergeArrays() {
         return Stream.of(
 //                Arguments.of(null, null, new int[]{}),
