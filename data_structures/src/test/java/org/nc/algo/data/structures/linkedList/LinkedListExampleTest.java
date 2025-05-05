@@ -1,6 +1,9 @@
 package org.nc.algo.data.structures.linkedList;
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -19,6 +22,11 @@ class LinkedListExampleTest {
         linkedListExample.remove(2);
         linkedListExample.remove(0);
         linkedListExample.print();
+
+        List<Integer> output = linkedListExample.getList();
+
+        Assertions.assertThat(output)
+                .containsExactly(5, 20, 30, 40);
     }
 
 }

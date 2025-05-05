@@ -1,5 +1,8 @@
 package org.nc.algo.data.structures.linkedList;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class Node {
     int data;
     Node next;
@@ -81,6 +84,18 @@ public class LinkedListExample {
         System.out.println(currentNode.data);
     }
 
+    public List<Integer> getList() {
+        Node currentNode = head;
+        List<Integer> list = new ArrayList<>();
+        int index = 0;
+        while (currentNode.next != null) {
+            list.add(index, currentNode.data);
+            currentNode = currentNode.next;
+            index++;
+        }
+        list.add(index, currentNode.data);
+        return list;
+    }
 
     // Bad examples - do u want to stay home like me.
     // This is a bad example
