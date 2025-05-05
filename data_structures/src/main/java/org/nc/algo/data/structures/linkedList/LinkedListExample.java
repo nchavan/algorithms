@@ -97,9 +97,4 @@ public class LinkedListExample {
         return list;
     }
 
-    // Bad examples - do u want to stay home like me.
-    // This is a bad example
-    // She has to be positive. How can she become positive => by doing some course of something.
-    // If she stays home she does not stay happy she is either complaining or fighting as she is dissatisfied with what she is doing.
-    // how can
 }
