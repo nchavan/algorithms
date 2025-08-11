@@ -30,7 +30,8 @@ class ReverseIntegerTest {
     private static Stream<Arguments> provideData() {
         return Stream.of(
                 Arguments.of(1234, 4321),
-                Arguments.of(12, 21)
+                Arguments.of(12, 21),
+                Arguments.of(1, 1)
         );
     }
 }
