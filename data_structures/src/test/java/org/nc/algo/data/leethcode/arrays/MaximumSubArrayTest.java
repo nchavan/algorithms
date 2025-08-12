@@ -12,7 +12,7 @@ class MaximumSubArrayTest {
 
         MaximumSubArray maximumSubArray = new MaximumSubArray();
 
-        int output = maximumSubArray.maxSubArray(nums);
+        int output = maximumSubArray.maxSubArrayUsingLoops(nums);
 
         assertEquals(output, 6);
     }
