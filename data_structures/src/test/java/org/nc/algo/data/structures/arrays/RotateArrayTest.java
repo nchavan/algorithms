@@ -14,7 +14,7 @@ class RotateArrayTest {
     @MethodSource("provideData")
     void rotateArray(int[] input, int[] expectedOutput, int rotate) {
         RotateArray rotateArray = new RotateArray();
-        int[] output = rotateArray.rotateArrayWithNoExtraMemory(input, rotate);
+        int[] output = rotateArray.rotateArray(input, rotate);
 
         assertArrayEquals(output, expectedOutput);
 

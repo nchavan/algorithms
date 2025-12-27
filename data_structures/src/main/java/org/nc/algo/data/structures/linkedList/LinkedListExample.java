@@ -27,6 +27,21 @@ public class LinkedListExample {
     }
 
     public void add(int data) {
+        Node node = new Node(data);
+
+        if (head == null) {
+            head = node;
+            tail = head;
+        }  else {
+            tail.next = node;
+            tail = node;
+        }
+
+        size++;
+    }
+
+
+    public void add2(int data) {
        Node node = new Node(data);
        Node currentNode = head;
 

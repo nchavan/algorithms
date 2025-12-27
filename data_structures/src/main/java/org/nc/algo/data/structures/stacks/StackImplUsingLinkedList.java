@@ -13,7 +13,7 @@ class Node {
     }
 }
 
-public class StackImpl {
+public class StackImplUsingLinkedList {
     Node top;
     Node bottom;
     int length;

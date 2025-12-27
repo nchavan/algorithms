@@ -1,6 +1,8 @@
 package org.nc.algo.data.structures.arrays;
 
+import java.util.Arrays;
 import java.util.Stack;
+import java.util.stream.Collectors;
 
 public class ReverseString {
 
@@ -43,6 +45,22 @@ public class ReverseString {
         }
 
         return output;
+    }
+
+    public String reverseString(String input) {
+        String[] str = input.split(""); // 0(n) // Space - array
+        int start = 0;
+        int end = str.length - 1;
+
+        while (start < end) {
+            String first = str[start];
+            str[start] = str[end];
+            str[end] = first;
+            start++;
+            end--;
+        }
+
+        return Arrays.stream(str).collect(Collectors.joining(""));
     }
 
 }

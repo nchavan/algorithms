@@ -14,7 +14,7 @@ class ReverseStringTest {
     public void reverseStringUsingStackMostSimpleWay(String input, String expected) {
         ReverseString reverseString = new ReverseString();
 
-        String output = reverseString.reverseStrUsingByteArray(input);
+        String output = reverseString.reverseString(input);
 
         Assertions.assertThat(output)
                 .isEqualTo(expected);

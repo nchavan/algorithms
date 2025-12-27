@@ -25,6 +25,12 @@ public class SumOfDistinctElementsInArray {
                 .sum();
     }
 
+    public int sumDistinctElementsUsing2(int[] array) {
+       Set<Integer> collect = Arrays.stream(array).boxed().collect(Collectors.toSet());
+
+       return collect.stream().mapToInt(Integer::intValue).sum();
+    }
+
     public int sumDistinctElementsUsing1(int[] array) {
 
         Map<Integer, Integer> map = new HashMap<>();

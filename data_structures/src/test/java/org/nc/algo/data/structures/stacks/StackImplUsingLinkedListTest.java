@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 import static java.util.List.of;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class StackImplTest {
+class StackImplUsingLinkedListTest {
 
     @Test
     void stackArraySequenceTest() {
-        StackImpl stack = new StackImpl();
+        StackImplUsingLinkedList stack = new StackImplUsingLinkedList();
         stack.push(10);
         stack.push(20);
         stack.push(30);

@@ -1,6 +1,7 @@
 package org.nc.algo.data.structures.linkedList;
 
-class NodeDobly {
+class
+NodeDobly {
     int value;
     NodeDobly next;
     NodeDobly prev;
