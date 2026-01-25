@@ -23,5 +23,8 @@ class BinarySearchTreeTest {
         assertThat(list)
                 .containsExactlyInAnyOrder(10, 5, 2, 8 ,15, 11, 25);
 
+        assertThat(binarySearchTree.search(25)).isTrue();
+        assertThat(binarySearchTree.search(16)).isFalse();
+
     }
 }

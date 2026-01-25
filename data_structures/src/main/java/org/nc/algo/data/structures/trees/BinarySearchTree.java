@@ -10,6 +10,24 @@ public class BinarySearchTree {
         this.node = new Node(value);
     }
 
+    public boolean search(int value) {
+
+        Node current = this.node;
+
+        while (current != null) {
+
+            if (value == current.value)
+                return true;
+
+            if (value < current.value)
+                current = current.left;
+            else
+                current = current.right;
+        }
+
+        return false;
+    }
+
     public void insert(int value) {
 
         Node current = this.node;
