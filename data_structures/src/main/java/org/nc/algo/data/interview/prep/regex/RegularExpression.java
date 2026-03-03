@@ -19,7 +19,9 @@ public enum RegularExpression {
     REMOVE_LOWER_OR_UPPER_CASE_LETTERS_AND_NUMBERS("[a-zA-Z0-9]+"), // remove the ^ and it will behave exactly opposite
     ANY("[^a-zA-Z0-9]*"),
     WORDS("\\W+"),
-    DIGITS_ONLY("\\D+");
+    DIGITS_ONLY("\\d*"),
+    PSIM("^p(s(i(m)?)?)?$"),
+    ESIM("^e(s(i(m)?)?)?$");
 
     private String value;
 

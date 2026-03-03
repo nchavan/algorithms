@@ -1,4 +1,4 @@
-package org.nc.algo.data.interview.prep.styles.twopointer;
+package org.nc.algo.data.interview.prep.styles.one.twopointer;
 
 public class ReverseWords {
 

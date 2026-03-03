@@ -1,4 +1,4 @@
-package org.nc.algo.data.interview.prep.styles.twopointer;
+package org.nc.algo.data.interview.prep.styles.one.twopointer;
 
 //Statement - Given an array, colors, which contains a combination of the following three elements:
 // 0 (Representing red)

@@ -4,9 +4,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.platform.commons.util.StringUtils;
 import org.nc.algo.data.interview.prep.regex.RegularExpression;
 
 import java.util.Arrays;
+import java.util.regex.Pattern;
 
 class RegularExpressionTest {
 
@@ -125,5 +129,42 @@ class RegularExpressionTest {
                 new String[]{"Hello_world", "Java", "Regex"},
                 result
         );
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"p", "s", "i", "m", "ps", "psi", "psim"})
+    @DisplayName("Split by non-word characters")
+    void testPSimWords(String input) {
+        Pattern p = Pattern.compile("^p(s(i(m)?)?)?$", Pattern.CASE_INSENSITIVE);
+        boolean ok = p.matcher(input).matches();
+        assertTrue(ok);
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"e", "s", "i", "m", "ps", "psi", "psim"})
+    @DisplayName("Split by non-word characters")
+    void testESimWords(String input) {
+        Pattern p = Pattern.compile("^e(s(i(m)?)?)?$", Pattern.CASE_INSENSITIVE);
+        boolean ok = p.matcher(input).matches();
+        assertTrue(ok);
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"123456677567568585", "131k123123123", "3131412412@312312", "131312123l", " ", "(psi)", "(psim)121231312"})
+    @DisplayName("Split by non-word characters")
+    void testDigitsOnly(String input) {
+        Pattern p = Pattern.compile(RegularExpression.DIGITS_ONLY.getValue(), Pattern.CASE_INSENSITIVE);
+        boolean ok = p.matcher(input).matches();
+        assertTrue(ok);
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"e", "s", "i", "m", "ps", "psi", "psim", "p", "s", "i", "m", "es", "esi", "esim"})
+    @DisplayName("Split by non-word characters")
+    void testEPSimWords(String input) {
+        Pattern p = Pattern.compile("^(p|e)s?i?m?$", Pattern.CASE_INSENSITIVE);
+        boolean ok = p.matcher(input).matches();
+
+        assertTrue(ok);
     }
 }

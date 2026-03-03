@@ -1,4 +1,4 @@
-package org.nc.algo.data.interview.prep.styles.twopointer;
+package org.nc.algo.data.interview.prep.styles.one.twopointer;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
